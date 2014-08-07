@@ -11,7 +11,6 @@ $(document).ready(function(){
 
 	// Generate that random Integer
 	var randInt = sessionStorage.randNum;
-	console.log(randInt);
 	if(randInt == 0){
 		div.style( "visibility", "visible", "important");
 		div.delay( 3000 ).animate({
@@ -36,11 +35,8 @@ $(document).ready(function(){
             var indexx = url.indexOf("{and}utm_medium");
             if(indexx != -1)
                 url = url.substr(0, indexx);
-            console.log(url);
             href = href.replace(url, url + result);
             $(this).attr('href', href);
-            var zoop = href.substr(index + 18) // Slice href at location of 'utm_source' plus length (18)
-            console.log(zoop);
         }
     }
   });
