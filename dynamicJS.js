@@ -34,7 +34,7 @@ $(document).ready(function(){
             var indexx = url.indexOf("{and}utm_medium");
             if(indexx != -1)
                 url = url.substr(0, indexx);
-            href = href.replace(url, url + result);
+            href = href.replace("utm_source{equals}" + url, "utm_source{equals}" + url + result);
             $(this).attr('href', href);
         }
     }
