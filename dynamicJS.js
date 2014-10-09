@@ -31,11 +31,11 @@ $(document).ready(function(){
         var index = href.indexOf("utm_source{equals}"); //Index of where found in link string
         if(index != -1){
             var url = href.substr(index + 18) // Slice href at location of 'utm_source' plus length (18)
-            var indexx = url.indexOf("{and}utm_medium");
+            var indexx = url.indexOf("{and}utm_medium"); //Index to the end of the string wanted
             if(indexx != -1)
                 url = url.substr(0, indexx);
-            href = href.replace("utm_source{equals}" + url, "utm_source{equals}" + url + result);
-            $(this).attr('href', href);
+            href = href.replace("utm_source{equals}" + url, "utm_source{equals}" + url + result); //add result only to utm_source
+            $(this).attr('href', href); //change the url
         }
     }
   });
