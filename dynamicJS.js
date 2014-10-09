@@ -16,7 +16,6 @@ $(document).ready(function(){
 		div.delay( 3000 ).animate({
 		    left:'-=760px'
 		  }, 4000, "easeOutQuint", function() {
-		    console.log('Animation complete');
 		});
     result = "-dynamic";
 	}
